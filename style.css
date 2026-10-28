@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at 20% 20%, #46443f 0%, transparent 45%),
+                radial-gradient(circle at 80% 80%, #2c2b28 0%, transparent 50%),
+                #232220;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #f3ede1;
+    gap: 30px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 34px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    color: #f3ede1;
+    text-align: center;
+}
+
+.choices {
+    display: flex;
+    gap: 24px;
+}
+
+.choice {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #4a4841, #232220 75%);
+    border: 1px solid rgba(216, 168, 67, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.choice:hover {
+    transform: translateY(-6px);
+    border-color: #d8a843;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.choice:active {
+    transform: translateY(-2px);
+}
+
+.choice img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.score-board {
+    display: flex;
+    gap: 40px;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 70px;
+}
+
+.score p:first-child {
+    font-size: 32px;
+    color: #d8a843;
+    line-height: 1.2;
+}
+
+.score p:last-child {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(243, 237, 225, 0.6);
+}
+
+.msg-cotainer {
+    min-height: 30px;
+     width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10
+}
+
+#msg {
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    color: #f3ede1;
+    text-align: center;
+}
+
+#msg.win {
+    color: #5f8f63;
+}
+
+#msg.lose {
+    color: #b5453b;
+}
+
+#msg.draw {
+    color: #8a8578;
+}
